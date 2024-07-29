@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Compliments
+{% endblock %}
+
+{% block content %}
+<!-- Jinja2 loop: get_flashed_messages() is a special Flask function that gets all messages that have been flashed. -->
+{% for message in get_flashed_messages() %}
+    <div class="custom-alert">
+        {{ message }}
+    </div>
+{% endfor %}
+
+<h1>Hello, nice to meet you!</h1>
+<form action="/compliments_results" method="GET">
+    <fieldset>
+        <legend>Your Info:</legend>
+
+        <label for="users_name">What is your name?</label>
+        <input type="text" name="users_name" id="users_name">
+        <br><br>
+
+        <p>Want Compliments?</p>
+        <span class="radio-option">
+            <input type="radio" name="wants_compliments" value="yes" id="compliments_yes">
+            <label for="compliments_yes">Yes</label>
+        </span>
+
+        <span class="radio-option">
+            <input type="radio" name="wants_compliments" value="no" id="compliments_no">
+            <label for="compliments_no">No</label>
+        </span>
+
+        <label for="num_compliments">How many compliments?</label>
+        <input type="number" name="num_compliments" min="1" max="5">
+        <br><br>
+
+        <input type="submit" value="Get Compliments!!">
+    </fieldset>
+</form>
+{% endblock %}

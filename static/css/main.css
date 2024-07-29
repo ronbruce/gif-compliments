@@ -1,0 +1,167 @@
+/* Reset styles ensures consistancy across all browsers */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+    background-color: #F4F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    max-height: 90vh;
+}
+
+h1 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #7E7F82;
+
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #EA5558;
+    letter-spacing: 2px;
+    transition: all 300ms ease;
+}
+
+ul, li {
+    width:100%;
+    }
+
+
+
+ul li a:hover {
+    letter-spacing: 0;
+}
+
+svg {
+    position: absolute;
+    z-index: -1;
+    transform: scale(0.5);
+}
+
+svg:nth-of-type(1) {
+    top: 80%;
+    left: 80%;
+
+    
+}
+
+svg:nth-of-type(2) {
+    top: 80%;
+    right: 80%;
+
+    
+}
+
+svg:nth-of-type(3) {
+    bottom: 80%;
+    left: 80%;
+
+    
+}
+
+svg:nth-of-type(4) {
+    bottom: 80%;
+    right: 80%;
+
+    
+}
+
+form {
+    max-width: 600px;
+    margin: 10px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    margin-top: 1em;
+    padding: 1em;
+    position: relative;
+    
+}
+
+legend {
+    background: #fff;
+    padding: 0 10px;
+    position: absolute;
+    top: -0.9em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2em;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-option {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+label[for="compliments_yes"],
+label[for="compliments_no"] {
+    display: inline;
+    margin: 0 10px 0 2px;
+}
+
+input[type="submit"] {
+    background: #EA5558;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.custom-alert {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+
+}

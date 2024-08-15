@@ -7,7 +7,7 @@ Compliments Results
 {% block content %}
 <h1> Hello, {{ users_name }}</h1>
 
-{% if wants_compliments == 'yes' %}
+{% if wants_compliments %}
     <h2>Compliments for you😉:</h2>
     <ul>
         {% for compliment in compliments_list %}

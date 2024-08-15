@@ -65,7 +65,7 @@ def compliments_results():
             raise ValueError("Name is required")
         
         wants_compliments = request.args.get('wants_compliments') == 'on'
-        
+               
         num_compliments_str = request.args.get('num_compliments', '1')
         if num_compliments_str.isdigit():
             num_compliments = int(num_compliments_str)
@@ -74,9 +74,13 @@ def compliments_results():
         
         if num_compliments > len(list_of_compliments):
             raise ValueError("Number of compliments requested exceeds available compliments. ")
-
+        
         compliments_list = random.sample(list_of_compliments, num_compliments) if wants_compliments else []
-    
+        print(f"User's name: {users_name}")
+        print(f"Wants compliments: {wants_compliments}")
+        print(f"Number of compliments requested: {num_compliments}")
+        print(f"Compliments list: {compliments_list}")
+
         context = {
             'users_name': users_name,
             'wants_compliments': wants_compliments,
@@ -88,6 +92,7 @@ def compliments_results():
     except ValueError as e:
         flash(str(e))
         return redirect(url_for('compliments'))
+        
 
 ################################################################################
 # ANIMAL FACTS ROUTE
